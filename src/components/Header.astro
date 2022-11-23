@@ -1,0 +1,79 @@
+---
+const url = Astro.url;
+
+interface URLButtons {
+  [key: string]: string;
+}
+const left: URLButtons = { "/": "🏠" };
+const right: URLButtons = { "/about": "About", "/portfolio": "Portfolio" };
+---
+
+<nav>
+  <div>
+    {
+      // This is a pain point in Astro. For such a simple use case.
+      // (set the link whose href matches the url path to have the class "selected").
+      //
+      // All the intuitive ways to be DRY don't work as expected here.
+      // I tried:
+      // - Extracting logic to a component (prevented me from styling the links)
+      // - Creating a helper function in this file to return the HTML for these links.
+      //   Returning HTML from a function does not work unless it is in {} in the HTML section of the file.
+      Object.keys(left).map((key) => (
+        <a href={key} class:list={[{ selected: url.pathname === key }]}>
+          {left[key]}
+        </a>
+      ))
+    }
+  </div>
+  <div>
+    {
+      Object.keys(right).map((key) => (
+        <a href={key} class:list={[{ selected: url.pathname.includes(key) }]}>
+          {right[key]}
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav > div {
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+    line-height: 1;
+  }
+
+  a {
+    padding: 0.75rem;
+    background-color: var(--background2);
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 2rem;
+    will-change: transform;
+    /* TODO: Fix color transition. */
+    transition: transform ease 0.3s, background-color ease 0.3s,
+      box-shadow ease 0.3s;
+    box-shadow: 0 0 0 0 var(--secondary);
+  }
+
+  a:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary);
+    color: var(--background);
+    box-shadow: 0 0.25rem 2rem -1rem var(--secondary);
+  }
+
+  .selected {
+    color: var(--background);
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    box-shadow: 0 0.25rem 2rem -1rem var(--primary);
+  }
+</style>

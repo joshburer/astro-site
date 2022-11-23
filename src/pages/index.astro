@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import { Image } from "@astrojs/image/components";
+import profile from "../images/profile.jpg";
+---
+
+<Layout>
+  <h1 class="gradient-text">Joshua Burer</h1>
+  <div class="profile-image-container">
+    <Image src={profile} alt="profile" width="500" format="webp" />
+  </div>
+  <hr />
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, porro
+    veritatis nemo voluptatum qui dolorum nobis explicabo. Laborum enim vel
+    dolore, eligendi voluptas tenetur inventore possimus illo saepe
+    reprehenderit accusamus!
+  </p>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+    font-style: italic;
+  }
+  .profile-image-container {
+    border-radius: 50%;
+    box-shadow: 0 0 0 -4rem var(--primary), 0 0 0 -4rem var(--secondary);
+    height: 20rem;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    overflow: hidden;
+    transition: transform ease 0.3s, box-shadow ease 1s, filter ease 1s;
+    width: 20rem;
+  }
+  .profile-image-container > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform ease 1s;
+  }
+  .profile-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 2rem 2rem 5rem -4rem var(--primary),
+      -2rem -2rem 5rem -4rem var(--secondary);
+    filter: contrast(1.1) brightness(1.2);
+  }
+  .profile-image-container:hover > img {
+    transform: scale(1.05);
+  }
+</style>

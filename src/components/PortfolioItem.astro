@@ -1,0 +1,28 @@
+---
+import { Image } from "@astrojs/image/components";
+const { title, description, link, image } = Astro.props;
+---
+
+<a href={link}>
+  {image && <Image src={image} height="100px" alt={description} />}
+  <h2>{title}</h2>
+  <p>{description}</p>
+</a>
+
+<style>
+  a {
+    display: block;
+    background-color: var(--background2);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    will-change: transform;
+    transition: transform ease 0.3s;
+  }
+  a:hover {
+    transform: scale(1.05);
+  }
+  h2 {
+    margin-top: 0;
+  }
+</style>

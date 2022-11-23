@@ -1,0 +1,20 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/base.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joshua Burer</title>
+    <meta name="description" content="Joshua Burer's Astro Site" />
+    <meta name="theme-color" content="var(--background)" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
