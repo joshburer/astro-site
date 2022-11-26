@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CardItem from "../components/CardItem.astro";
+import type { MarkdownInstance } from "astro";
+
+interface Props {
+  title: string;
+  glob: MarkdownInstance<Record<string, any>>[];
+}
+const { title, glob } = Astro.props;
+---
+
+<BaseLayout>
+  <h1>{title}</h1>
+  <div>
+    {
+      glob.map((x) => (
+        <CardItem
+          title={x.frontmatter.title}
+          description={x.frontmatter.description}
+          image={x.frontmatter.image}
+          link={x.url}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

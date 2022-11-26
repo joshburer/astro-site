@@ -51,6 +51,11 @@ li {
   max-width: 70ch;
 }
 
+ul,
+ol {
+  padding-inline-start: 1.5rem;
+}
+
 .gradient-text,
 h1 {
   background-clip: text;
@@ -77,6 +82,7 @@ main {
   padding-inline: 1rem;
   min-width: 20rem;
   width: fit-content;
+  max-width: 50rem;
 }
 
 hr {

@@ -10,20 +10,15 @@ import profile from "../images/profile.jpg";
     <Image src={profile} alt="profile" width="500" format="webp" />
   </div>
   <hr />
-  <p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, porro
-    veritatis nemo voluptatum qui dolorum nobis explicabo. Laborum enim vel
-    dolore, eligendi voluptas tenetur inventore possimus illo saepe
-    reprehenderit accusamus!
-  </p>
+  <p>Hey there! 👋</p>
 </Layout>
 
 <style>
   h1 {
+    font-family: var(--serif);
+    margin-inline: auto;
     text-align: center;
     width: fit-content;
-    margin-inline: auto;
-    font-style: italic;
   }
   .profile-image-container {
     border-radius: 50%;
@@ -36,16 +31,16 @@ import profile from "../images/profile.jpg";
     width: 20rem;
   }
   .profile-image-container > img {
-    object-fit: cover;
-    width: 100%;
     height: 100%;
+    object-fit: cover;
     transition: transform ease 1s;
+    width: 100%;
   }
   .profile-image-container:hover {
-    transform: scale(1.05);
     box-shadow: 2rem 2rem 5rem -4rem var(--primary),
       -2rem -2rem 5rem -4rem var(--secondary);
     filter: contrast(1.1) brightness(1.2);
+    transform: scale(1.05);
   }
   .profile-image-container:hover > img {
     transform: scale(1.05);

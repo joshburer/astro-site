@@ -1,0 +1,6 @@
+---
+import CardListingLayout from "../layouts/CardListingLayout.astro";
+const blogPosts = await Astro.glob("./blog/*.md");
+---
+
+<CardListingLayout title="Blog" glob={blogPosts} />

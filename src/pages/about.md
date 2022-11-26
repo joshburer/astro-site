@@ -5,6 +5,8 @@ title: About
 
 # About
 
+This is some technical stuff, so if you don't care about how this site was _made_, don't read it.
+
 This site was built using <span class="astro-link">[Astro](https://astro.build/)</span> in an effort to accomplish a few things:
 
 - Keep the JavaScript payload small and keep things minimal.

@@ -1,28 +1,6 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import PortfolioItem from "../components/PortfolioItem.astro";
-
-const portfolioItems = await Astro.glob("./portfolio/*.md");
+import CardListingLayout from "../layouts/CardListingLayout.astro";
+const portfolioItems = await Astro.glob('./portfolio/*.md')
 ---
 
-<BaseLayout>
-  <h1>Portfolio</h1>
-  <div>
-    {
-      portfolioItems.map((x) => (
-        <PortfolioItem
-          title={x.frontmatter.title}
-          description={x.frontmatter.description}
-          image={x.frontmatter.image}
-          link={x.url}
-        />
-      ))
-    }
-  </div>
-</BaseLayout>
-
-<style>
-  .portfolio-item {
-    display: block;
-  }
-</style>
+<CardListingLayout title="Portfolio" glob={portfolioItems}/>

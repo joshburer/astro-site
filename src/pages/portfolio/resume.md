@@ -1,9 +1,11 @@
 ---
 layout: ../../layouts/PortfolioLayout.astro
-title: "Resume"
-description: "My resume of work experience."
+title: "Professional Résumé"
+description: "My résumé of work experience."
 ---
 
-# Resume
+# Professional Résumé
+
+[Download the PDF](google.com)
 
 I did somefing
