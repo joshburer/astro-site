@@ -4,7 +4,9 @@ import { Image } from "@astrojs/image/components";
 import profile from "../images/profile.jpg";
 ---
 
-<Layout>
+<Layout
+  description="I'm Josh. I'm a full-time web developer and student based in Atlanta, GA. Currently pursuing a Bachelors in Computer Science at Georgia Tech!"
+>
   <h1 class="gradient-text">Joshua Burer</h1>
   <div class="profile-image-container">
     <Image src={profile} alt="profile" width="500" format="webp" />

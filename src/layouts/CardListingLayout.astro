@@ -15,15 +15,17 @@ const { title, glob } = Astro.props;
   <slot />
   <div class="card-listing">
     {
-      glob.map((x) => (
-        <CardItem
-          title={x.frontmatter.title}
-          description={x.frontmatter.description}
-          image={x.frontmatter.image}
-          date={x.frontmatter.date}
-          link={x.url}
-        />
-      ))
+      glob.length
+        ? glob.map((x) => (
+            <CardItem
+              title={x.frontmatter.title}
+              description={x.frontmatter.description}
+              image={x.frontmatter.image}
+              date={x.frontmatter.date}
+              link={x.url}
+            />
+          ))
+        : "Nothing here yet!"
     }
   </div>
 </BaseLayout>
