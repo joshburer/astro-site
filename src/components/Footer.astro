@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer>
+  <nav>
+    <a href="https://github.com/joshburer">
+      <Icon name="mdi:github" />
+      Github
+    </a>
+    <a href="mailto:contact@joshuaburer.com">
+      <Icon name="mdi:email-outline" />
+      Email
+    </a>
+    <a href="https://www.linkedin.com/in/joshuaburer/">
+      <Icon name="mdi:linkedin" />
+      LinkedIn
+    </a>
+  </nav>
+</footer>
+
+<style>
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  [astro-icon] {
+    height: 1.2rem;
+    margin-right: 1ch;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  a {
+    background-color: var(--background2);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    text-decoration: none;
+    will-change: transform;
+    transition: transform ease 0.5s;
+    width: 5.5rem;
+  }
+  a:hover {
+    transform: scale(1.05);
+  }
+</style>

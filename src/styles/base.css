@@ -99,3 +99,15 @@ p [astro-icon] {
   position: relative;
   top: 0.3em;
 }
+
+/* Tricks to get the footer to be at the bottom */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body:after {
+  content: "";
+  display: block;
+  height: 4rem;
+}

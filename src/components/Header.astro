@@ -25,7 +25,11 @@ const right: URLButtons = {
         // - Extracting logic to a component (prevented me from styling the links)
         // - Creating a helper function in this file to return the HTML for these links.
         //   Returning HTML from a function does not work unless it is in {} in the HTML section of the file.
-        <a href={base} class:list={[{ selected: url.pathname === base }]}>
+        <a
+          href={base}
+          class:list={[{ selected: url.pathname === base }]}
+          title="Home"
+        >
           <Icon name="mdi:home" />
         </a>
       )
