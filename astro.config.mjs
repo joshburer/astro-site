@@ -6,7 +6,12 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx()]
+  site: "joshburer.github.io",
+  base: "/astro-site",
+  integrations: [
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+  ],
 });
