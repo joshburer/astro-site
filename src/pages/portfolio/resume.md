@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PortfolioLayout.astro
+layout: "@layouts/PortfolioLayout.astro"
 title: "Professional Résumé"
 description: "My résumé of work experience."
 ---
