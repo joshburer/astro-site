@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const base = import.meta.env.BASE_URL;
+const { title } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
   <a href={`${base}portfolio`}>« Go back</a>
   <slot />
 </BaseLayout>

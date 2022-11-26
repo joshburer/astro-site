@@ -10,7 +10,7 @@ interface Props {
 const { title, glob } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
   <h1>{title}</h1>
   <slot />
   <div class="card-listing">
