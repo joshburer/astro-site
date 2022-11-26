@@ -1,6 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
-const { title, description, link, image } = Astro.props;
+const { title, description, link, image, date } = Astro.props;
 ---
 
 <a href={link}>
@@ -9,6 +9,7 @@ const { title, description, link, image } = Astro.props;
     <h2>{title}</h2>
     <div class="title-underline"></div>
   </div>
+  <p class="timestamp">{date}</p>
   <p>{description}</p>
 </a>
 
@@ -45,5 +46,16 @@ const { title, description, link, image } = Astro.props;
 
   a:hover .title-underline {
     width: 100%;
+  }
+
+  .timestamp {
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0.6rem;
+    margin-bottom: 0;
   }
 </style>

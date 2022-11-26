@@ -12,6 +12,7 @@ const { title, glob } = Astro.props;
 
 <BaseLayout>
   <h1>{title}</h1>
+  <slot />
   <div>
     {
       glob.map((x) => (
@@ -19,6 +20,7 @@ const { title, glob } = Astro.props;
           title={x.frontmatter.title}
           description={x.frontmatter.description}
           image={x.frontmatter.image}
+          date={x.frontmatter.date}
           link={x.url}
         />
       ))

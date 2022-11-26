@@ -1,29 +1,33 @@
 ---
+import { Icon } from "astro-icon";
 const url = Astro.url;
 
 interface URLButtons {
   [key: string]: string;
 }
-const left: URLButtons = { "/": "🏠" };
-const right: URLButtons = { "/about": "About", "/portfolio": "Portfolio" };
+const right: URLButtons = {
+  "/about": "About",
+  "/blog": "Blog",
+  "/portfolio": "Portfolio",
+};
 ---
 
 <nav>
   <div>
     {
-      // This is a pain point in Astro. For such a simple use case.
-      // (set the link whose href matches the url path to have the class "selected").
-      //
-      // All the intuitive ways to be DRY don't work as expected here.
-      // I tried:
-      // - Extracting logic to a component (prevented me from styling the links)
-      // - Creating a helper function in this file to return the HTML for these links.
-      //   Returning HTML from a function does not work unless it is in {} in the HTML section of the file.
-      Object.keys(left).map((key) => (
-        <a href={key} class:list={[{ selected: url.pathname === key }]}>
-          {left[key]}
+      (
+        // This is a pain point in Astro. For such a simple use case.
+        // (set the link whose href matches the url path to have the class "selected").
+        //
+        // All the intuitive ways to be DRY don't work as expected here.
+        // I tried:
+        // - Extracting logic to a component (prevented me from styling the links)
+        // - Creating a helper function in this file to return the HTML for these links.
+        //   Returning HTML from a function does not work unless it is in {} in the HTML section of the file.
+        <a href="/" class:list={[{ selected: url.pathname === "/" }]}>
+          <Icon name="mdi:home" />
         </a>
-      ))
+      )
     }
   </div>
   <div>
@@ -48,6 +52,10 @@ const right: URLButtons = { "/about": "About", "/portfolio": "Portfolio" };
     display: flex;
     gap: 1rem;
     line-height: 1;
+  }
+
+  nav > div:has([astro-icon]) {
+    line-height: 0;
   }
 
   a {
@@ -75,5 +83,10 @@ const right: URLButtons = { "/about": "About", "/portfolio": "Portfolio" };
     color: var(--background);
     background-image: linear-gradient(var(--primary), var(--secondary));
     box-shadow: 0 0.25rem 2rem -1rem var(--primary);
+  }
+
+  nav [astro-icon] {
+    height: 1.5rem;
+    line-height: 1;
   }
 </style>
