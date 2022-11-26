@@ -27,7 +27,7 @@ import profile from "../images/profile.jpg";
     margin-bottom: 2rem;
     margin-inline: auto;
     overflow: hidden;
-    transition: transform ease 0.3s, box-shadow ease 1s, filter ease 1s;
+    transition: box-shadow ease 1s, filter ease 1s;
     width: 20rem;
   }
   .profile-image-container > img {
@@ -40,9 +40,5 @@ import profile from "../images/profile.jpg";
     box-shadow: 2rem 2rem 5rem -4rem var(--primary),
       -2rem -2rem 5rem -4rem var(--secondary);
     filter: contrast(1.1) brightness(1.2);
-    transform: scale(1.05);
-  }
-  .profile-image-container:hover > img {
-    transform: scale(1.05);
   }
 </style>

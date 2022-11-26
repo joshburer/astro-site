@@ -1,14 +1,15 @@
 ---
 import { Icon } from "astro-icon";
 const url = Astro.url;
+const base = import.meta.env.BASE_URL;
 
 interface URLButtons {
   [key: string]: string;
 }
 const right: URLButtons = {
-  "/about": "About",
-  "/blog": "Blog",
-  "/portfolio": "Portfolio",
+  about: "About",
+  blog: "Blog",
+  portfolio: "Portfolio",
 };
 ---
 
@@ -24,7 +25,7 @@ const right: URLButtons = {
         // - Extracting logic to a component (prevented me from styling the links)
         // - Creating a helper function in this file to return the HTML for these links.
         //   Returning HTML from a function does not work unless it is in {} in the HTML section of the file.
-        <a href="/" class:list={[{ selected: url.pathname === "/" }]}>
+        <a href={base} class:list={[{ selected: url.pathname === base }]}>
           <Icon name="mdi:home" />
         </a>
       )
@@ -33,7 +34,10 @@ const right: URLButtons = {
   <div>
     {
       Object.keys(right).map((key) => (
-        <a href={key} class:list={[{ selected: url.pathname.includes(key) }]}>
+        <a
+          href={base + key}
+          class:list={[{ selected: url.pathname.includes(key) }]}
+        >
           {right[key]}
         </a>
       ))

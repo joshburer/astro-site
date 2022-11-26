@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout>
-  <a href="/portfolio">« Go back</a>
+  <a href={`${base}portfolio`}>« Go back</a>
   <slot />
 </BaseLayout>
