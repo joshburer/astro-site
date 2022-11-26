@@ -4,7 +4,6 @@
   --primary: #2c7f8d;
   --secondary: #265f6a;
   --text-color: #20262c;
-  /* TODO: Better sans-serif font */
   --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
@@ -65,22 +64,10 @@ h1 {
   width: fit-content;
 }
 
-.container {
-  background: var(--background2);
-  border-radius: 1rem;
-  padding: 1rem;
-}
-
-.center-contents {
-  display: grid;
-  place-items: center;
-  width: 100%;
-}
-
 main {
   margin: auto;
   padding-inline: 1rem;
-  min-width: 20rem;
+  min-width: 15rem;
   width: fit-content;
   max-width: 50rem;
 }
@@ -110,4 +97,14 @@ body:after {
   content: "";
   display: block;
   height: 4rem;
+}
+
+/* utilities */
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.italic {
+  font-style: italic;
 }

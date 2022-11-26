@@ -1,0 +1,39 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: "Building this site"
+description: "My thoughts on Astro & the process of building a site with it."
+date: "Nov. 25, 2022"
+---
+
+import { Icon } from "astro-icon";
+
+# Building this site
+
+Hey! Glad you made it to my website. If you're seeing this, that means that it's probably working.
+
+As stated in the [About Page](/about), this site was built with <Icon name="vscode-icons:file-type-astro"/>[Astro](https://astro.build/) and hosted using Github Pages.
+You can view the repo [here!](https://github.com/joshburer/astro-site)
+
+## Design Goals
+
+I set out using this framework in order to accomplish a few things:
+
+- Keep the JavaScript payload small and keep things minimal.
+- Have the ability to edit site content with Markdown and build to a static site.
+- Learn a new framework :)
+
+Overall, building this site was really fun and I stayed motivated through to the end.
+
+---
+
+## Thoughts on the Astro developer experience
+
+- 0kb-JS is pretty cool.
+- Directory-based routing is intuitive, but sometimes means you have to sacrifice project structure.
+- React-style templating (keeping HTML and JS together) is intuitive and good. Seems to be getting popular among other frameworks too.
+  - Astro's `.astro` format has some flaws with this.
+    - You have to explicitly consume `class` as a prop for components. I appreciate not having to use `className` all the time, but this makes selecting child components needlessly difficult.
+    - You cannot add styles to child elements without making styles global (scope is not applied to children). There is no way to select a custom component through CSS.
+    - Rules are inconsistent for returning HTML from a function. It works when templating within `{}` in the HTML section of a file, but in the JavaScript "frontmatter" section of a `.astro` file, it does not work.
+  - Upside is, you can just use whatever framework you want, mix and match as you please. I have not yet messed with this.
+  - Astro has similar improvements to Svelte, as style can be scoped and kept within a component. AFAIK, react does not have a good way to do this out of the box.

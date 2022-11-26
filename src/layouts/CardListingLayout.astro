@@ -13,7 +13,7 @@ const { title, glob } = Astro.props;
 <BaseLayout>
   <h1>{title}</h1>
   <slot />
-  <div>
+  <div class="card-listing">
     {
       glob.map((x) => (
         <CardItem
@@ -27,3 +27,11 @@ const { title, glob } = Astro.props;
     }
   </div>
 </BaseLayout>
+
+<style>
+  .card-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

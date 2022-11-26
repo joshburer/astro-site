@@ -1,6 +1,7 @@
 ---
+import type { MarkdownInstance } from "astro";
 import CardListingLayout from "../layouts/CardListingLayout.astro";
-const blogPosts = await Astro.glob("./blog/*.md");
+const blogPosts: MarkdownInstance<Record<string, any>>[] = await Astro.glob("./blog/*.md*");
 ---
 
 <CardListingLayout title="Blog" glob={blogPosts} />
