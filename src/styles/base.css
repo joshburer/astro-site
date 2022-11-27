@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Poppins&display=swap");
+
 :root {
   --background: white;
   --background2: #d2d8e0;
   --primary: #2c7f8d;
   --secondary: #265f6a;
   --text-color: #20262c;
-  --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --sans-serif: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+  --serif: Lora, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
     Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
 }

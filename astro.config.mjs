@@ -4,7 +4,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://joshburer.github.io",
+  site: "https://joshuaburer.com",
   integrations: [
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
