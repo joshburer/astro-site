@@ -20,13 +20,13 @@ const { title, description, link, image, date } = Astro.props;
     display: block;
     padding: 1rem;
     text-decoration: none;
-    transition: transform ease 0.3s, outline ease 0.3s;
-    outline: 0 solid var(--secondary);
-    will-change: transform, outline;
+    transition: transform ease 0.3s, box-shadow ease 0.3s;
+    box-shadow: 0 0 0 0rem var(--secondary);
+    will-change: transform, box-shadow;
   }
   a:hover {
     transform: scale(1.05);
-    outline: 0.3rem solid var(--secondary);
+    box-shadow: 0 0 0 0.3rem var(--secondary);
   }
 
   h2 {
