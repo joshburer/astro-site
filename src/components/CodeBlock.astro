@@ -1,0 +1,29 @@
+---
+const { lang, content } = Astro.props;
+import "highlight.js/styles/atom-one-dark.css";
+---
+
+<pre class="code-block">
+<code class={"language-" + lang}>
+{content}
+</code>
+</pre>
+
+<script>
+  import hljs from "highlight.js";
+
+  hljs.highlightAll();
+</script>
+
+<style>
+.code-block {
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  border-radius: 1rem;
+  overflow-x: auto;
+  width: min(calc(100vw - 4rem), 100%);
+}
+</style>
