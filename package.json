@@ -15,7 +15,7 @@
     "@astrojs/mdx": "^0.12.0",
     "astro": "^1.6.10",
     "astro-icon": "^0.8.1",
-    "highlight.js": "^11.7.0",
+    "highlight.js": "^11.9.0",
     "sharp": "^0.32.5"
   }
 }
