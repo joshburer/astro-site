@@ -1,0 +1,72 @@
+---
+layout: "@layouts/PortfolioLayout.astro"
+title: "MyCollegeBook"
+description: "Georgia Tech Junior Capstone project. A cross-platform mobile app for helping students buy & sell used college textbooks."
+date: "Aug 2023 - May 2024"
+---
+import {Image} from "astro:assets";
+import myCollegBookFront from "../../images/mycollegebook_expo_front.png";
+import myCollegBookBack from "../../images/mycollegebook_expo_back.png";
+
+# MyCollegeBook
+
+
+## Project Overview
+
+Based on requirements provided by a client, I and a team of 5 others worked together to develop a native iOS and Android mobile app
+that would provide a specialized campus-specific marketplace for buying and selling used college textbooks.
+
+As planned, the team implemented the following major features:
+- Creating & searching through book listings.
+- Initiate meetup requests to hand off the book on-campus, providing location and time.
+- Utilize Stripe for payment processing to collect fees on transactions.
+- Allow users to rate their transactions and provide a score for users based on their rating.
+- Provide an admin interface for moderation of the service.
+
+The project culminated in a final presentation and demonstration at the Junior Design Expo, showcasing the app's features and functionality.
+
+## Technology Choices
+
+Based on the nature of mobile applications, the team decided on a client-server architecture using
+React Native with Expo for the frontend, Django for the backend, and PostgreSQL for the database.
+I played a leading role in this decision. Based on my ample prior experience, and some other team members'
+familiarity with Python and React, we chose to develop the backend using Django, developing a REST API that
+the React Native frontend would communicate with.
+
+## My Role on the Team
+
+During both semesters, I was one of two leading members of the team, and helped to facilitate most of the programming,
+code review, documentation, communication, and bookkeeping associated with the project.
+
+As one of the leading members of the team, and with my background in full-stack software development,
+I got to play a significant role in steering the technical direction and facilitating team communication for the project.
+While the technical aspects of the project were within my familiar territory,
+this experience improved my leadership and managerial skills,
+though I found it to be a challenge to balance with my other classes and full-time work.
+
+Managing the distribution of tasks was a challenge, especially with varying levels of engagement from team members.
+Retrospectively, I now realize the importance of assigning tasks not only based on skills but also by considering individual workloads
+and interests to get people engaged. Developing clear technical communications was crucial.
+I refined my ability to document and convey technical details in ways that were accessible to all team members, regardless
+of their technical background.
+
+For the future, the project has equipped me with the tools to better anticipate and mitigate challenges in team dynamics,
+particularly in teams where members are splitting time between several different projects (or college classes!).
+The insights gained from this project have prepared me to take on more significant leadership roles in future projects,
+applying the lessons learned to improve both project outcomes and team relationships.
+
+
+Below are images of the front and back of the Expo collateral we used to present the app at the Junior Design Expo.
+
+<div style="display: flex; flex-direction: column; gap:1rem; justify-content: space-between;">
+<Image
+  alt="Expo Collateral Front"
+  src={myCollegBookFront}
+  style="width: 100%; height: auto; max-width: 500px; margin: auto;"
+/>
+<Image
+  alt="Expo Collateral Back"
+  src={myCollegBookBack}
+  style="width: 100%; height:auto; max-width: 500px; margin: auto;"
+/>
+</div>
