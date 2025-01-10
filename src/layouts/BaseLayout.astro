@@ -2,6 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import "../styles/base.css";
+let fullTitle = 'Joshua Burer'
 let { title, description, frontmatter } = Astro.props;
 
 if (frontmatter?.title) {
@@ -10,13 +11,19 @@ if (frontmatter?.title) {
 if (frontmatter?.description) {
   description = frontmatter.description;
 }
+
+if (title) {
+  fullTitle = `${title} - Joshua Burer`
+}
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}{title ? " - " : ""}Joshua Burer</title>
+    <title>
+      {fullTitle}
+    </title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="var(--background)" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
