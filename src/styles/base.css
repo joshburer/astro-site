@@ -10,6 +10,7 @@
   --serif: Lora, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
     Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
+  --monospace: "Fira Code", "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--sans-serif);
+  font-family: var(--monospace);
 }
 
 a {
@@ -97,7 +98,7 @@ body {
 body:after {
   content: "";
   display: block;
-  height: 10rem;
+  height: 12rem;
 }
 
 /* utilities */

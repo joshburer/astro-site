@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import profile from "../images/profile.jpg";
 ---
 <Layout
-  description="I'm Josh. I'm a web developer based in Atlanta, GA. Recently completed a Bachelor's in Computer Science at Georgia Tech!"
+  description="I'm Josh. I'm a web developer based in Atlanta, GA with a B.S. in Computer Science from Georgia Tech!"
 >
   <h1 class="gradient-text">Joshua Burer</h1>
   <div class="profile-image-container">
@@ -17,15 +17,13 @@ import profile from "../images/profile.jpg";
     />
   </div>
   <hr />
-  <p class="center">
-    I'm a web developer based in Atlanta, GA.
-    Recently completed a Bachelor's in Computer Science at Georgia Tech!
+  <p class="center" id="bio">
+    I'm a web developer based in Atlanta, GA, with a B.S. in Computer Science from Georgia Tech!
   </p>
 </Layout>
 
 <style>
   h1 {
-    font-family: var(--serif);
     margin-inline: auto;
     text-align: center;
     width: fit-content;
@@ -50,5 +48,9 @@ import profile from "../images/profile.jpg";
     box-shadow: 2rem 2rem 5rem -4rem var(--primary),
       -2rem -2rem 5rem -4rem var(--secondary);
     filter: contrast(1.1) brightness(1.2);
+  }
+  #bio {
+    max-width: 40ch;
+    text-align: center;
   }
 </style>

@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 ---
 
 <footer>
-  <nav>
+  <div>
     <a href="https://github.com/joshburer">
       <Icon name="mdi:github" />
       Github
@@ -16,7 +16,7 @@ import { Icon } from "astro-icon";
       <Icon name="mdi:linkedin" />
       LinkedIn
     </a>
-  </nav>
+  </div>
 </footer>
 
 <style>
@@ -30,8 +30,9 @@ import { Icon } from "astro-icon";
     height: 1.2rem;
     margin-right: 1ch;
   }
-  nav {
+  div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -46,7 +47,8 @@ import { Icon } from "astro-icon";
     text-decoration: none;
     will-change: transform;
     transition: transform ease 0.5s;
-    width: 6rem;
+    width: 7rem;
+    font-family: var(--monospace);
   }
   a:hover {
     transform: scale(1.05);
